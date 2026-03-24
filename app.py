@@ -202,70 +202,70 @@ while (x > 0) {
         "correta": "Loop infinito",
         "explicacao": "x nunca é alterado, então a condição sempre será verdadeira."
     }
-{
-    "id": "Q11",
-    "titulo": "Transformação — for para while",
-    "tipo": "radio",
-    "enunciado": "Qual alternativa representa corretamente a conversão do loop for para while?",
-    "codigo": """for (int i = 1; i <= 3; i++) {
-    System.out.println(i);
-}""",
-    "opcoes": [
-        """int i = 1;
-while (i <= 3) {
-    System.out.println(i);
-}""",
-        """int i = 1;
-while (i <= 3) {
-    System.out.println(i);
-    i++;
-}""",
-        """int i = 0;
-while (i < 3) {
-    System.out.println(i);
-}""",
-        """while (i <= 3) {
-    System.out.println(i);
-    i++;
-}"""
-    ],
-    "correta": """int i = 1;
-while (i <= 3) {
-    System.out.println(i);
-    i++;
-}""",
-    "explicacao": "O for possui inicialização, condição e incremento. No while, precisamos declarar a variável antes e atualizar manualmente dentro do bloco."
-},
-{
-    "id": "Q12",
-    "titulo": "Transformação — while para for",
-    "tipo": "radio",
-    "enunciado": "Qual alternativa representa corretamente a conversão do while para for?",
-    "codigo": """int i = 1;
-
-while (i <= 3) {
-    System.out.println(i);
-    i++;
-}""",
-    "opcoes": [
-        """for (int i = 1; i <= 3; i++) {
-    System.out.println(i);
-}""",
-        """for (int i = 0; i < 3; i++) {
-    System.out.println(i);
-}""",
-        """for (i = 1; i <= 3; i++) {
-    System.out.println(i);
-}""",
-        """for (int i = 1; i < 3; i++) {
-    System.out.println(i);
-}"""
-    ],
-    "correta": """for (int i = 1; i <= 3; i++) {
-    System.out.println(i);
-}""",
-    "explicacao": "O for reúne inicialização, condição e incremento em uma única linha."
-}    
+    {
+        "id": "Q11",
+        "titulo": "Transformação — for para while",
+        "tipo": "radio",
+        "enunciado": "Qual alternativa representa corretamente a conversão do loop for para while?",
+        "codigo": """for (int i = 1; i <= 3; i++) {
+        System.out.println(i);
+    }""",
+        "opcoes": [
+            """int i = 1;
+    while (i <= 3) {
+        System.out.println(i);
+    }""",
+            """int i = 1;
+    while (i <= 3) {
+        System.out.println(i);
+        i++;
+    }""",
+            """int i = 0;
+    while (i < 3) {
+        System.out.println(i);
+    }""",
+            """while (i <= 3) {
+        System.out.println(i);
+        i++;
+    }"""
+        ],
+        "correta": """int i = 1;
+    while (i <= 3) {
+        System.out.println(i);
+        i++;
+    }""",
+        "explicacao": "O for possui inicialização, condição e incremento. No while, precisamos declarar a variável antes e atualizar manualmente dentro do bloco."
+    },
+    {
+        "id": "Q12",
+        "titulo": "Transformação — while para for",
+        "tipo": "radio",
+        "enunciado": "Qual alternativa representa corretamente a conversão do while para for?",
+        "codigo": """int i = 1;
+    
+    while (i <= 3) {
+        System.out.println(i);
+        i++;
+    }""",
+        "opcoes": [
+            """for (int i = 1; i <= 3; i++) {
+        System.out.println(i);
+    }""",
+            """for (int i = 0; i < 3; i++) {
+        System.out.println(i);
+    }""",
+            """for (i = 1; i <= 3; i++) {
+        System.out.println(i);
+    }""",
+            """for (int i = 1; i < 3; i++) {
+        System.out.println(i);
+    }"""
+        ],
+        "correta": """for (int i = 1; i <= 3; i++) {
+        System.out.println(i);
+    }""",
+        "explicacao": "O for reúne inicialização, condição e incremento em uma única linha."
+    }    
 ]
 
 
