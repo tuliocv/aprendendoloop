@@ -37,72 +37,178 @@ TOTAL_QUESTOES = 4
 QUESTOES = [
     {
         "id": "Q1",
-        "titulo": "Previsão de saída",
+        "titulo": "Contagem simples",
         "tipo": "radio",
-        "enunciado": "Qual será a saída do código abaixo?",
-        "codigo": """for (int i = 1; i <= 3; i++) {
-    System.out.println("Valor = " + i);
-}""",
+        "enunciado": "Qual código imprime os números de 1 até 10 corretamente?",
+        "codigo": None,
         "opcoes": [
-            "Valor = 1 / Valor = 2 / Valor = 3",
-            "Valor = 0 / Valor = 1 / Valor = 2",
-            "Valor = 1 / Valor = 2 / Valor = 3 / Valor = 4",
-            "O código entra em loop infinito"
+            """for (int i = 1; i <= 10; i++) {
+    System.out.println(i);
+}""",
+            """for (int i = 0; i < 10; i++) {
+    System.out.println(i);
+}""",
+            """while (i <= 10) {
+    System.out.println(i);
+}""",
+            """for (int i = 10; i >= 1; i--) {
+    System.out.println(i);
+}"""
         ],
-        "correta": "Valor = 1 / Valor = 2 / Valor = 3",
-        "explicacao": "O laço começa em 1, repete enquanto i <= 3 e incrementa de 1 em 1."
+        "correta": """for (int i = 1; i <= 10; i++) {
+    System.out.println(i);
+}""",
+        "explicacao": "O laço começa em 1, vai até 10 e incrementa de 1 em 1."
     },
     {
         "id": "Q2",
-        "titulo": "Escolha o loop correto",
+        "titulo": "Contagem regressiva",
+        "tipo": "radio",
+        "enunciado": "Qual saída será produzida pelo código abaixo?",
+        "codigo": """for (int i = 10; i >= 1; i--) {
+    System.out.print(i + " ");
+}""",
+        "opcoes": [
+            "1 2 3 4 5 6 7 8 9 10",
+            "10 9 8 7 6 5 4 3 2 1",
+            "10 8 6 4 2",
+            "O código entra em loop infinito"
+        ],
+        "correta": "10 9 8 7 6 5 4 3 2 1",
+        "explicacao": "O contador inicia em 10 e vai decrementando até 1."
+    },
+    {
+        "id": "Q3",
+        "titulo": "Soma de 1 até N",
+        "tipo": "radio",
+        "enunciado": "Se N = 5, qual será o valor final de soma?",
+        "codigo": """int soma = 0;
+for (int i = 1; i <= 5; i++) {
+    soma = soma + i;
+}
+System.out.println(soma);""",
+        "opcoes": ["5", "10", "15", "20"],
+        "correta": "15",
+        "explicacao": "1 + 2 + 3 + 4 + 5 = 15."
+    },
+    {
+        "id": "Q4",
+        "titulo": "Números pares",
+        "tipo": "radio",
+        "enunciado": "Qual condição mostra apenas números pares entre 1 e 20?",
+        "codigo": """for (int i = 1; i <= 20; i++) {
+    if ( ________ ) {
+        System.out.println(i);
+    }
+}""",
+        "opcoes": [
+            "i % 2 == 0",
+            "i % 2 == 1",
+            "i > 2",
+            "i == 20"
+        ],
+        "correta": "i % 2 == 0",
+        "explicacao": "Números pares deixam resto 0 na divisão por 2."
+    },
+    {
+        "id": "Q5",
+        "titulo": "Validação com while",
         "tipo": "radio",
         "enunciado": "Em qual situação o while é a melhor escolha?",
         "codigo": None,
         "opcoes": [
-            "Imprimir os números de 1 até 10",
-            "Exibir os 5 primeiros múltiplos de 3",
-            "Pedir uma senha até o usuário digitar corretamente",
-            "Mostrar exatamente 7 mensagens na tela"
+            "Exibir exatamente 10 números",
+            "Mostrar a tabuada do 7",
+            "Pedir um número positivo até o usuário digitar corretamente",
+            "Imprimir os números de 1 a 5"
         ],
-        "correta": "Pedir uma senha até o usuário digitar corretamente",
-        "explicacao": "Use while quando a repetição depende de uma condição e a quantidade de tentativas é desconhecida."
+        "correta": "Pedir um número positivo até o usuário digitar corretamente",
+        "explicacao": "Use while quando a repetição depende de uma condição e a quantidade de tentativas não é fixa."
     },
     {
-        "id": "Q3",
-        "titulo": "Encontre o erro",
+        "id": "Q6",
+        "titulo": "Tabuada",
         "tipo": "radio",
-        "enunciado": "Qual é o principal problema desse código?",
-        "codigo": """int x = 0;
-
-while (x > 4) {
-    System.out.println(x);
-    x++;
+        "enunciado": "Se o número lido for 3, qual saída representa corretamente a tabuada de 1 a 4?",
+        "codigo": """int n = 3;
+for (int i = 1; i <= 4; i++) {
+    System.out.println(n + " x " + i + " = " + (n * i));
 }""",
         "opcoes": [
-            "Falta ponto e vírgula no while",
-            "A condição está errada e o loop não executa nenhuma vez",
-            "O código vai gerar loop infinito",
-            "O incremento deveria ser x--"
+            "3 x 1 = 3 / 3 x 2 = 6 / 3 x 3 = 9 / 3 x 4 = 12",
+            "3 x 0 = 0 / 3 x 1 = 3 / 3 x 2 = 6 / 3 x 3 = 9",
+            "1 x 3 = 3 / 2 x 3 = 6 / 3 x 3 = 9 / 4 x 3 = 12",
+            "3 6 9"
         ],
-        "correta": "A condição está errada e o loop não executa nenhuma vez",
-        "explicacao": "Como x inicia com 0, a condição x > 4 já começa falsa."
+        "correta": "3 x 1 = 3 / 3 x 2 = 6 / 3 x 3 = 9 / 3 x 4 = 12",
+        "explicacao": "O laço percorre de 1 a 4 e imprime o produto de n por i."
     },
     {
-        "id": "Q4",
-        "titulo": "Complete o código",
-        "tipo": "duplo_select",
-        "enunciado": "Escolha a condição e a atualização corretas.",
-        "codigo": """int x = 1;
-
-while ( ________ ) {
-    System.out.println("x = " + x);
-    ________;
+        "id": "Q7",
+        "titulo": "Soma de múltiplos",
+        "tipo": "radio",
+        "enunciado": "Qual código soma corretamente os múltiplos de 3 entre 1 e 10?",
+        "codigo": None,
+        "opcoes": [
+            """int soma = 0;
+for (int i = 1; i <= 10; i++) {
+    if (i % 3 == 0) {
+        soma += i;
+    }
 }""",
-        "opcoes_condicao": ["x < 4", "x > 4", "x == 10", "true"],
-        "opcoes_incremento": ["x++", "x--", "x = 0", "System.out.println(x)"],
-        "correta_condicao": "x < 4",
-        "correta_incremento": "x++",
-        "explicacao": "Assim o programa imprime 1, 2 e 3 e depois encerra o loop."
+            """int soma = 0;
+for (int i = 1; i <= 10; i++) {
+    if (i % 3 == 1) {
+        soma += i;
+    }
+}""",
+            """int soma = 0;
+for (int i = 3; i <= 10; i++) {
+    soma = 3;
+}""",
+            """int soma = 0;
+while (true) {
+    soma++;
+}"""
+        ],
+        "correta": """int soma = 0;
+for (int i = 1; i <= 10; i++) {
+    if (i % 3 == 0) {
+        soma += i;
+    }
+}""",
+        "explicacao": "Os múltiplos de 3 entre 1 e 10 são 3, 6 e 9."
+    },
+    {
+        "id": "Q8",
+        "titulo": "Contador de positivos",
+        "tipo": "radio",
+        "enunciado": "No problema 'ler números até digitar 0', o que deve encerrar o loop?",
+        "codigo": None,
+        "opcoes": [
+            "Quando o número for negativo",
+            "Quando o número for maior que 0",
+            "Quando o número digitado for 0",
+            "Quando o contador chegar em 10"
+        ],
+        "correta": "Quando o número digitado for 0",
+        "explicacao": "O valor 0 funciona como sentinela para encerrar a repetição."
+    },
+    {
+        "id": "Q9",
+        "titulo": "Desafio — Número secreto",
+        "tipo": "texto_livre",
+        "enunciado": "Escreva um algoritmo ou código Java que peça tentativas ao usuário até ele acertar um número secreto. Ao errar, o programa deve informar se o valor digitado é maior ou menor. Ao acertar, deve mostrar a quantidade de tentativas.",
+        "codigo": None,
+        "explicacao": "Resposta aberta. O professor avaliará a lógica do loop, da comparação e do contador de tentativas."
+    },
+    {
+        "id": "Q10",
+        "titulo": "Desafio — Fibonacci",
+        "tipo": "texto_livre",
+        "enunciado": "Escreva um algoritmo ou código Java que imprima os N primeiros termos da sequência de Fibonacci. Exemplo: para N = 7, a saída esperada é 0, 1, 1, 2, 3, 5, 8.",
+        "codigo": None,
+        "explicacao": "Resposta aberta. O professor avaliará controle de variáveis, repetição e construção da sequência."
     }
 ]
 
