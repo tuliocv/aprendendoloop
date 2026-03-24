@@ -201,7 +201,7 @@ while (x > 0) {
         ],
         "correta": "Loop infinito",
         "explicacao": "x nunca é alterado, então a condição sempre será verdadeira."
-    }
+    },
     {
         "id": "Q11",
         "titulo": "Transformação — for para while",
